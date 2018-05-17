@@ -8,6 +8,8 @@ import okhttp3.*;
 public class JavaOKHTTPPost {
     private static final MediaType JSON
         = MediaType.parse("application/json; charset=utf-8");
+    private static final String pathToFileJson = "src/files/file.json";
+    private static final String postURL = "https://httpbin.org/post";
 
     private OkHttpClient client = new OkHttpClient();
 
@@ -27,7 +29,7 @@ public class JavaOKHTTPPost {
         if (path != null){
             Gson gson = new Gson();
 
-            try (Reader reader = new FileReader("src/file.json")) {
+            try (Reader reader = new FileReader(pathToFileJson)) {
                 // Convert JSON to JsonElement, and later to String
                 JsonElement json = gson.fromJson(reader, JsonElement.class);
 
@@ -51,8 +53,8 @@ public class JavaOKHTTPPost {
 
     public static void main(String[] args) throws IOException {
         JavaOKHTTPPost example = new JavaOKHTTPPost();
-        String json = example.generateJSON("src/file.json");
-        String response = example.post("https://httpbin.org/post", json);
+        String json = example.generateJSON(pathToFileJson);
+        String response = example.post(postURL, json);
         System.out.println(response);
     }
 }
