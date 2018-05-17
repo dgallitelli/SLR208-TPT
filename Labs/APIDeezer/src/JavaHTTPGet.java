@@ -13,20 +13,20 @@ import java.util.Map;
  *
  * @author alvin alexander, http://alvinalexander.com.
  */
-public class JavaHttpUrlConnectionReader {
+public class JavaHTTPGet {
 
     private String myURL;
     private Map<String, String> messages;
 
     public static void main(String[] args) {
         try {
-            new JavaHttpUrlConnectionReader();
+            new JavaHTTPGet();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private JavaHttpUrlConnectionReader() throws Exception {
+    private JavaHTTPGet() throws Exception {
         this.myURL = "https://httpbin.org/get?";
         messages = new LinkedHashMap<>();
         int i = 1;
