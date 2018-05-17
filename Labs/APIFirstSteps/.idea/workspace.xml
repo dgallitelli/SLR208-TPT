@@ -15,7 +15,7 @@
       <file leaf-file-name="JavaHTTPGet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaHTTPGet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-882">
+            <state relative-caret-position="792">
               <caret line="44" column="60" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="JavaFormPost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaFormPost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="1710">
               <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="102" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="JavaHTTPPut.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaHTTPPut.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-484">
+            <state relative-caret-position="270">
               <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -51,14 +51,10 @@
       <file leaf-file-name="JavaOKHTTPGet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPGet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
+            <state relative-caret-position="1008">
               <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
-                <element signature="e#1808#1809#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +63,8 @@
       <file leaf-file-name="JavaOKHTTPPost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="56" column="54" lean-forward="true" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+            <state relative-caret-position="576">
+              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#generateJSON#0;class#JavaOKHTTPPost#0" />
@@ -80,12 +76,10 @@
       <file leaf-file-name="JavaOKHTTPPostFiles.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPostFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+            <state relative-caret-position="492">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,20 +149,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="APIDeezer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APIFirstSteps" type="b2602c69:ProjectViewProjectNode" />
               <item name="APIDeezer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="APIDeezer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APIFirstSteps" type="b2602c69:ProjectViewProjectNode" />
               <item name="APIDeezer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="APIDeezer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APIFirstSteps" type="b2602c69:ProjectViewProjectNode" />
               <item name="APIDeezer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="files" type="462c0819:PsiDirectoryNode" />
@@ -177,8 +173,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -189,10 +183,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/httpclient-4.0.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -273,20 +268,19 @@
       <workItem from="1526460157182" duration="50000" />
       <workItem from="1526460246911" duration="596000" />
       <workItem from="1526461337449" duration="2287000" />
-      <workItem from="1526550188739" duration="8241000" />
+      <workItem from="1526550188739" duration="8695000" />
+      <workItem from="1526567580280" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15836000" />
+    <option name="totallyTimeSpent" value="16380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="704" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32809773" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -298,7 +292,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32809773" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18484849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18787879" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -312,6 +306,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32809773" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +316,67 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/JavaHTTPGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="60" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaFormPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="102" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaHTTPPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="56" column="54" lean-forward="true" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#generateJSON#0;class#JavaOKHTTPPost#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPostFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaHTTPGet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -434,7 +490,7 @@
     <entry file="file://$PROJECT_DIR$/test.http" />
     <entry file="file://$PROJECT_DIR$/src/JavaHTTPGet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
+        <state relative-caret-position="792">
           <caret line="44" column="60" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -444,7 +500,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaFormPost.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
+        <state relative-caret-position="1710">
           <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="102" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -454,7 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaHTTPPut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
+        <state relative-caret-position="270">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -464,29 +520,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPGet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
+        <state relative-caret-position="1008">
           <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1808#1809#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/file.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file.json" />
     <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPost.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="56" column="54" lean-forward="true" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+        <state relative-caret-position="576">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#generateJSON#0;class#JavaOKHTTPPost#0" />
@@ -496,12 +542,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaOKHTTPPostFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        <state relative-caret-position="492">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -563,6 +607,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
