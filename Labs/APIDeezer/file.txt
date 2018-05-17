@@ -1,0 +1,1 @@
+C'est un fichier encodé en UTF-8!
