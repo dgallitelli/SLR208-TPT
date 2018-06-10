@@ -63,6 +63,7 @@ public class DeezerTrack {
         this.preview = preview;
     }
 
+    @Override
     public String toString() {
         return "{" + "\n"+
                 "\t'id': " + getId() + "\n"+

@@ -12,47 +12,84 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static MediaPlayer mediaPlayer;
+
     public static void main(String[] args) {
 
         JFXPanel fxPanel = new JFXPanel();
 
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gs = gsonBuilder.create();
+        int userPoints = 0;
 
         try {
-            DeezerTrack myTrack = gs.fromJson(deezerGET(), DeezerTrack.class);
-            System.out.println("## Reproducing music now ## " +myTrack.getPreview());
-            // System.out.println(myTrack.toString());
-            Media song = new Media(myTrack.getPreview());
-            MediaPlayer mediaPlayer = new MediaPlayer(song);
-            mediaPlayer.play();
-            Scanner input = new Scanner(System.in);
-            System.out.println("[IN] Input name of the song: ");
-            String titleGuess = input.nextLine();
-            if (checkTitle(titleGuess, myTrack))
-                System.out.println("[OK] Congratulations! You won!");
-            else
-                System.out.println("[ERR] Sorry, wrong answer.");
+            // Get playList info
+            DeezerPlaylist deezerPlaylist = getDeezerPlaylist(1363560485);
+
+            for (DeezerTrack track : deezerPlaylist.getTracks().getData()){
+                // Play data one by one and prompt for title
+                System.out.println("## Reproducing music now ## " +track.getPreview());
+                playTrack(track);
+
+                System.out.println("[IN] Input name of the song: ");
+                Scanner input = new Scanner(System.in);
+                String titleGuess = input.nextLine();
+                stopTrack();
+                if (titleGuess.compareTo("STOP")==0) break;
+                if (checkTitle(titleGuess, track)) {
+                    System.out.println("[OK] Great Job! +1");
+                    userPoints +=1;
+                } else System.out.println("[ERR] Sorry! The actual title was: "+track.getTitle());
+            }
+
+            System.out.println("[END] Congrats: you scored "+ userPoints +" points!");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static String deezerGET() throws IOException {
+    /**
+     * Function to load a playlist from deezer and get informations and tracklist
+     * @param playListID the ID of the playlist
+     * @return the object containing playlist info and tracks
+     * @throws IOException
+     */
+    private static DeezerPlaylist getDeezerPlaylist(int playListID) throws IOException {
         OkHttpClient okHttpClient = new OkHttpClient();
-        String deezerTrackURL = "https://api.deezer.com/track/3135556";
         Request request = new Request.Builder()
-                .url(deezerTrackURL).build();
+                .url("https://api.deezer.com/playlist/"+playListID).build();
         Response response = okHttpClient.newCall(request).execute();
-        return response.body().string();
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gs = gsonBuilder.create();
+        return gs.fromJson(response.body().string(), DeezerPlaylist.class);
+    }
+
+    /**
+     * Function to reproduce a track
+     * @param myTrack track of type DeezerTrack to reproduce
+     */
+    private static void playTrack(DeezerTrack myTrack){
+        Media song = new Media(myTrack.getPreview());
+        mediaPlayer = new MediaPlayer(song);
+        mediaPlayer.play();
+    }
+
+    /**
+     * Function to stop execution of track
+     */
+    private static void stopTrack(){
+        mediaPlayer.stop();
     }
 
     /**
      * Function to check if the string input by the user is the actual title
      * @param _title Input from the user - title
+     * @param _myTrack DeezerTrack of the current track playing
      * @return True if it's the same title, False otherwise
      */
     private static Boolean checkTitle(String _title, DeezerTrack _myTrack){
-        return _title.compareTo(_myTrack.getTitle()) == 0;
+        _title = _title.toLowerCase();
+        String actualTitle = _myTrack.getTitle().toLowerCase();
+        return _title.compareTo(actualTitle) == 0 || _title.compareTo(actualTitle) == 0;
     }
 }
