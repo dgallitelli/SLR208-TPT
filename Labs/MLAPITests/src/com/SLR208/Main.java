@@ -1,47 +1,57 @@
 package com.SLR208;
 
+import com.amazonaws.services.rekognition.AmazonRekognition;
+import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
+import com.amazonaws.services.rekognition.model.AmazonRekognitionException;
+import com.amazonaws.services.rekognition.model.Image;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.util.List;
 
-import com.amazonaws.services.rekognition.AmazonRekognition;
-import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
-import com.amazonaws.services.rekognition.model.AmazonRekognitionException;
-import com.amazonaws.services.rekognition.model.DetectLabelsRequest;
-import com.amazonaws.services.rekognition.model.DetectLabelsResult;
-import com.amazonaws.services.rekognition.model.Image;
-import com.amazonaws.services.rekognition.model.Label;
+import com.amazonaws.services.rekognition.model.AgeRange;
+import com.amazonaws.services.rekognition.model.Attribute;
+import com.amazonaws.services.rekognition.model.DetectFacesRequest;
+import com.amazonaws.services.rekognition.model.DetectFacesResult;
+import com.amazonaws.services.rekognition.model.FaceDetail;
 import com.amazonaws.util.IOUtils;
+
 
 public class Main {
 
+
     public static void main(String[] args) throws Exception {
-        String photo="Rorschach.jpg";
-        // String photo="carbonara.jpg";
+
+        String photo = "src/images/me.jpg";
+
+        AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.defaultClient();
+
 
         ByteBuffer imageBytes;
         try (InputStream inputStream = new FileInputStream(new File(photo))) {
             imageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
         }
 
-        AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.defaultClient();
-
-        DetectLabelsRequest request = new DetectLabelsRequest()
-                .withImage(new Image()
-                        .withBytes(imageBytes))
-                .withMaxLabels(10)
-                .withMinConfidence(77F);
+        DetectFacesRequest request = new DetectFacesRequest()
+                .withImage(new Image().withBytes(imageBytes))
+                .withAttributes(Attribute.ALL);
+        // Replace Attribute.ALL with Attribute.DEFAULT to get default values.
 
         try {
+            DetectFacesResult result = rekognitionClient.detectFaces(request);
+            List < FaceDetail > faceDetails = result.getFaceDetails();
 
-            DetectLabelsResult result = rekognitionClient.detectLabels(request);
-            List<Label> labels = result.getLabels();
+            for (FaceDetail face: faceDetails) {
+                if (request.getAttributes().contains("ALL")) {
+                    AgeRange ageRange = face.getAgeRange();
+                    System.out.println("The detected face is estimated to be between "
+                            + ageRange.getLow().toString() + " and " + ageRange.getHigh().toString()
+                            + " years old.");
+                }
 
-            System.out.println("Detected labels for " + photo);
-            for (Label label: labels) {
-                System.out.println(label.getName() + ": " + label.getConfidence().toString());
+                System.out.println("This face looks: "+face.getEmotions().get(0).getType());
             }
 
         } catch (AmazonRekognitionException e) {
@@ -49,4 +59,6 @@ public class Main {
         }
 
     }
+
 }
+
