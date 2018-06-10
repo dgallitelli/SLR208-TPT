@@ -26,7 +26,6 @@ public class Main {
 
             for (DeezerTrack track : deezerPlaylist.getTracks().getData()){
                 // Play data one by one and prompt for title
-                System.out.println("## Reproducing music now ## " +track.getPreview());
                 playTrack(track);
 
                 System.out.println("[IN] Input name of the song: ");
@@ -39,7 +38,7 @@ public class Main {
                     userPoints +=1;
                 } else System.out.println("[ERR] Sorry! The actual title was: "+track.getTitle());
             }
-
+            stopTrack();
             System.out.println("[END] Congrats: you scored "+ userPoints +" points!");
 
         } catch (Exception e) {
@@ -69,7 +68,9 @@ public class Main {
      * @param myTrack track of type DeezerTrack to reproduce
      */
     private static void playTrack(DeezerTrack myTrack){
-        Media song = new Media(myTrack.getPreview());
+        String newURL = myTrack.getPreview().split(":")[1];
+        System.out.println("## Reproducing music now ## " +"http:"+newURL);
+        Media song = new Media("http:"+newURL);
         mediaPlayer = new MediaPlayer(song);
         mediaPlayer.play();
     }
